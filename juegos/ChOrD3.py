@@ -1,20 +1,20 @@
 def JuegoMusica():
     import random
-    
+        
     def representacion_piano():
         piano = ["DO   RE   MI FA   SOL   LA   SI DO",
-                 "  !#!  !#!  !  !#!   !#!  !#!  !  ",
-                 "  !#!  !#!  !  !#!   !#!  !#!  !  ",
-                 "  !#!  !#!  !  !#!   !#!  !#!  !  "]
+                    "  !#!  !#!  !  !#!   !#!  !#!  !  ",
+                    "  !#!  !#!  !  !#!   !#!  !#!  !  ",
+                    "  !#!  !#!  !  !#!   !#!  !#!  !  "]
         for i in piano:
             print(i)
-    
+        
     def puntajes(nombre, puntaje, mas100, menos100):
-        archivo_directorio = "C:/Users/Public/Documents/puntajes.txt"
-        archivo = open(archivo_directorio, "a")
-        archivo.write(nombre + " - Puntaje total: " + str(puntaje) + " (Ganados: " + str(mas100) + ", Perdidos: " + str(menos100) + ")\n")
-        archivo.close()
-    
+            archivo_directorio = "C:/Users/Public/Documents/puntajes.txt"
+            archivo = open(archivo_directorio, "a")
+            archivo.write(nombre + " - Puntaje total: " + str(puntaje) + " (Ganados: " + str(mas100) + ", Perdidos: " + str(menos100) + ")\n")
+            archivo.close()
+        
     nombre = input("Ingrese su nombre: ")
     puntaje = 0
     puntajes_ganados = 0
@@ -37,7 +37,7 @@ def JuegoMusica():
         acorde_la: "Am",
         acorde_si: "Bdim"
     }
-    
+        
     print("Notas de la escala mayor de C: ", notas)
     print("Si el acorde es Do Mayor, responder con C")
     print("Si el acorde es Re menor, responder con Dm")
@@ -47,7 +47,7 @@ def JuegoMusica():
     print("Si el acorde es La menor, responder con Am")
     print("Si el acorde es Si disminuido, responder con Bdim") 
     print()
-    
+        
     while puntaje < 1000:
         representacion_piano()
         print()
@@ -67,7 +67,7 @@ def JuegoMusica():
             print("Un acorde disminuido tiene una distancia de un tono y medio entre las tres notas") 
     if puntaje >= 1000:
         print("¡Felicidades, llegaste a los 1.000 puntos!")
-    
+        
     print()
     puntajes(nombre, puntaje, puntajes_ganados, puntajes_perdidos)
     print("Su puntaje ha sido guardado " + nombre)
