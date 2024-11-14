@@ -60,7 +60,7 @@ def JuegoMusica():
             puntajes_ganados = puntajes_ganados + 100
         else:
             puntaje = puntaje - 100
-            puntajes_perdidos = puntajes_perdidos + 100  # Asegúrate de sumar 100 a los perdidos
+            puntajes_perdidos = puntajes_perdidos + 100 
             print("                                                              Incorrecto... -100p, recuerda que:") 
             print("Un acorde Mayor tiene que tener una distancia de dos tonos entre la primera nota y la segunda y un tono y medio entre la segunda y tercera")
             print("Un acorde menor tiene una distancia de un tono y medio entre la primera nota y la segunda y dos tonos entre la segunda y la última")
