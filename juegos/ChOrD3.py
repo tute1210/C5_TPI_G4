@@ -28,7 +28,6 @@ def JuegoMusica():
     acorde_la = tuple([notas[5], notas[7], notas[2]])
     acorde_si = tuple([notas[6], notas[1], notas[3]])
     acordes_azar = [acorde_do, acorde_re, acorde_mi, acorde_fa, acorde_sol, acorde_la, acorde_si]
-    acordes_azar2 = [acordes_azar[0], acordes_azar[1], acordes_azar[2], acordes_azar[3], acordes_azar[4], acordes_azar[5], acordes_azar[6]]
     resp_acordes = {
         acorde_do: "C",
         acorde_re: "Dm",
