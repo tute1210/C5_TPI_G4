@@ -55,18 +55,18 @@ def JuegoMusica():
         print(tres_notas)
         resp_usuario = input("Que acorde es?: ")
         if resp_usuario == resp_acordes[tres_notas]:
-            print("                                                              Correcto! +100p")
+            print("                                                              ¡Correcto! +100p")
             puntaje = puntaje + 100
             puntajes_ganados = puntajes_ganados + 100
         else:
             puntaje = puntaje - 100
-            puntajes_perdidos = puntajes_perdidos - 100
-            print("                                                              Incorrecto... -100p, recorda que:") 
-            print("Un acorde Mayor tiene que tener una distancia de dos tonos entre la primer nota y la segunda y un tono y medio entre la segunda y tercera")
-            print("Un acorde menor tiene una distancia de un tono y medio entre la primer nota y la segunda y dos tonos entre la segunda y la ultima")
+            puntajes_perdidos = puntajes_perdidos + 100  # Asegúrate de sumar 100 a los perdidos
+            print("                                                              Incorrecto... -100p, recuerda que:") 
+            print("Un acorde Mayor tiene que tener una distancia de dos tonos entre la primera nota y la segunda y un tono y medio entre la segunda y tercera")
+            print("Un acorde menor tiene una distancia de un tono y medio entre la primera nota y la segunda y dos tonos entre la segunda y la última")
             print("Un acorde disminuido tiene una distancia de un tono y medio entre las tres notas") 
     if puntaje >= 1000:
-        print("Felicidades, llegaste a los 1.000 puntos")
+        print("¡Felicidades, llegaste a los 1.000 puntos!")
     
     print()
     puntajes(nombre, puntaje, puntajes_ganados, puntajes_perdidos)
