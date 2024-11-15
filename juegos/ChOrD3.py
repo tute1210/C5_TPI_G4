@@ -69,5 +69,5 @@ def JuegoMusica():
         print("¡Felicidades, llegaste a los 1.000 puntos!")
 
     print()
-    print("Su puntaje ha sido guardado " + nombre)
     puntajes(nombre, puntaje, puntajes_ganados, puntajes_perdidos)
+    print("Su puntaje ha sido guardado " + nombre)
