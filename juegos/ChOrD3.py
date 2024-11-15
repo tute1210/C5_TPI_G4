@@ -1,11 +1,11 @@
 def juego_musica():
     import random
-    
+        
     def representacion_piano():
         piano = ["DO   RE   MI FA   SOL   LA   SI DO",
-                 "  !#!  !#!  !  !#!   !#!  !#!  !  ",
-                 "  !#!  !#!  !  !#!   !#!  !#!  !  ",
-                 "  !#!  !#!  !  !#!   !#!  !#!  !  "]
+                "  !#!  !#!  !  !#!   !#!  !#!  !  ",
+                "  !#!  !#!  !  !#!   !#!  !#!  !  ",
+                "  !#!  !#!  !  !#!   !#!  !#!  !  "]
         for i in piano:
             print(i)
 
