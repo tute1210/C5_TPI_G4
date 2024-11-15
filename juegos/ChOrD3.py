@@ -1,6 +1,5 @@
+import random
 def JuegoMusica():
-    import random
-    
     def representacion_piano():
         piano = ["DO   RE   MI FA   SOL   LA   SI DO",
                  "  !#!  !#!  !  !#!   !#!  !#!  !  ",
