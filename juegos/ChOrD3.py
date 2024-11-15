@@ -1,5 +1,6 @@
-import random
 def JuegoMusica():
+    import random
+    
     def representacion_piano():
         piano = ["DO   RE   MI FA   SOL   LA   SI DO",
                  "  !#!  !#!  !  !#!   !#!  !#!  !  ",
@@ -68,6 +69,5 @@ def JuegoMusica():
         print("¡Felicidades, llegaste a los 1.000 puntos!")
 
     print()
-    puntajes(nombre, puntaje, puntajes_ganados, puntajes_perdidos)
     print("Su puntaje ha sido guardado " + nombre)
-
+    puntajes(nombre, puntaje, puntajes_ganados, puntajes_perdidos)
