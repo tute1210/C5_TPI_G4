@@ -17,7 +17,7 @@ print("Digita 2 para seleccionar el nivel dificil")
 dificultad = int(input())
 if dificultad == 1:
 #NIVEL 1
-    while respCorrectasN1 != 3 and vidas != 0:
+    while respCorrectasN1 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(1, 3)
@@ -40,7 +40,7 @@ if dificultad == 1:
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
             print("")
-    if respCorrectasN1 == 3:    
+    if respCorrectasN1 == 7:    
         print("Felicidades,",nombre," avanzaste de nivel:")
         print("")
         print("Pregunta BONUS")
@@ -81,7 +81,7 @@ if dificultad == 1:
     
     #NIVEL 2    
    
-    while respCorrectasN2 != 3 and vidas != 0:
+    while respCorrectasN2 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(4, 6)
@@ -102,7 +102,7 @@ if dificultad == 1:
             print("---------------------------------------------")
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
-    if respCorrectasN2 == 3:    
+    if respCorrectasN2 == 7:    
         print("Felicidades,",nombre," avanzaste de nivel:")
         print("")
         print("Pregunta BONUS")
@@ -143,7 +143,7 @@ if dificultad == 1:
   
      #NIVEL 3    
     
-    while respCorrectasN3 != 3 and vidas != 0:
+    while respCorrectasN3 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(7, 9)
@@ -164,7 +164,7 @@ if dificultad == 1:
             print("---------------------------------------------")
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
-    if respCorrectasN3 == 3:    
+    if respCorrectasN3 == 7:    
         print("Felicidades,",nombre," has completado todos los niveles")
         print("¡Eres un ganador ♛!")
     else:
@@ -172,7 +172,7 @@ if dificultad == 1:
 #DIFIULTAD DIFICIL        
 elif dificultad == 2:
 #NIVEL 1    
-    while respCorrectasN1 != 3 and vidas != 0:
+    while respCorrectasN1 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(1, 3)
@@ -193,7 +193,7 @@ elif dificultad == 2:
             print("---------------------------------------------")
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
-    if respCorrectasN1 == 3:    
+    if respCorrectasN1 == 7:    
         print("Felicidades,",nombre," avanzaste de nivel:")
         print("")
         print("Pregunta BONUS")
@@ -219,7 +219,7 @@ elif dificultad == 2:
                 print("")
                 print("Has elegido una vida extra ♡ !")
                 print("")
-                vidas += 1
+                
                 print("Ahora tienes",vidas,"vidas ♡")
                 print("")
                 print("Bienvenido al nivel 2")
@@ -232,7 +232,7 @@ elif dificultad == 2:
     
 #NIVEL 2    
     
-    while respCorrectasN2 != 3 and vidas != 0:
+    while respCorrectasN2 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(3, 6)
@@ -253,7 +253,7 @@ elif dificultad == 2:
             print("---------------------------------------------")
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
-    if respCorrectasN2 == 3:    
+    if respCorrectasN2 == 7:    
         print("Felicidades,",nombre," avanzaste de nivel:")
         print("")
         print("Pregunta BONUS")
@@ -291,7 +291,7 @@ elif dificultad == 2:
                 print("Bienvenido al nivel 3")
     
 #NIVEL 3
-    while respCorrectasN3 != 3 and vidas != 0:
+    while respCorrectasN3 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(7, 9)
@@ -312,7 +312,7 @@ elif dificultad == 2:
             print("---------------------------------------------")
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
-    if respCorrectasN3 == 3:    
+    if respCorrectasN3 == 7:    
         print("Felicidades,",nombre," avanzaste de nivel:")
         print("")
         print("Pregunta BONUS")
@@ -350,7 +350,7 @@ elif dificultad == 2:
                 print("Bienvenido al nivel 4")
     
 #NIVEL 4
-    while respCorrectasN4 != 3 and vidas != 0:
+    while respCorrectasN4 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(1, 9)
@@ -376,7 +376,7 @@ elif dificultad == 2:
             print("---------------------------------------------")
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
-    if respCorrectasN4 == 3:    
+    if respCorrectasN4 == 7:    
         print("Felicidades,",nombre," avanzaste de nivel:")
         print("")
         print("Pregunta BONUS")
@@ -420,7 +420,7 @@ elif dificultad == 2:
     
 #NIVEL 5        
         
-    while respCorrectasN5 != 3 and vidas != 0:
+    while respCorrectasN5 != 7 and vidas != 0:
         cont += 1
         print("Resuelve esta multiplicación")
         num1 = random.randint(1, 9)
@@ -449,7 +449,7 @@ elif dificultad == 2:
             print("---------------------------------------------")
             vidas -= 1
             print("Te quedan:",vidas,"vidas ♡")
-    if respCorrectasN5 == 3:    
+    if respCorrectasN5 == 7:    
         print("Felicidades,",nombre," has completado todos los niveles")
         print("¡Eres un ganador ♛!")
     else:
