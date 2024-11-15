@@ -1,6 +1,6 @@
 # from juegos.CazadoresDeGramatica import test (Linea de codigo definida para cuando esten las funciones echas)
 from juegos.JuegoAdivinaAnimal import iniciar_juego
-from juegos.ChOrD3 import Juego_Musica
+from juegos.ChOrD3 import juego_musica
 menu = 0
 
 while menu != 3:
