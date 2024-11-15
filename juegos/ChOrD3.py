@@ -1,4 +1,4 @@
-def JuegoMusica():
+def juego_musica():
     import random
     
     def representacion_piano():
