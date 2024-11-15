@@ -22,7 +22,7 @@ while menu != 3:
     elif menu == 2:
         iniciar_juego()
     elif menu == 4:
-        Juego_Musica()
+        juego_musica()
     elif menu == 3:
         print("            PROGRAMA FINALIZADO")
 
