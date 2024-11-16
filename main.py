@@ -16,7 +16,8 @@ while menu != 3:
     print("        |2| →       Adivina El Animal     |")
     print("        |3| →   Tablas de multiplicar     |")
     print("        |4| →            Ch0rD3           |")
-    print("        |5| →            SALIR            |")
+    print("        |5| →        Ultra Septimum       |")
+    print("        |6| →            SALIR            |")
     print()
     menu = int(input("              Opcion a elegir →"))
     if menu == 1:
@@ -28,6 +29,8 @@ while menu != 3:
     elif menu == 4:
         juego_musica()
     elif menu == 5:
+        juegar()
+    elif menu == 6:
         print("            PROGRAMA FINALIZADO")
 
         
