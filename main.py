@@ -26,11 +26,11 @@ while menu != 3:
     elif menu == 2:
         iniciar_juego()
     elif menu == 3:
-        tablas()
+        LlamarJuegoMultiplicar()
     elif menu == 4:
         juego_musica()
     elif menu == 5:
-        juegar()
+        jugar()
     elif menu == 6:
         print("            PROGRAMA FINALIZADO")
 
