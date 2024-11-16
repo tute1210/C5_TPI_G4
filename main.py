@@ -2,6 +2,7 @@
 from juegos.JuegoAdivinaAnimal import iniciar_juego
 from juegos.ChOrD3 import juego_musica
 from juegos.LlamarJuegoMultiplicar import tablas
+from juegos.ultra_septimum import jugar
 menu = 0
 
 while menu != 3:
