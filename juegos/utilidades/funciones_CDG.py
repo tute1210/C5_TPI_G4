@@ -35,10 +35,10 @@ def comparacion_oraciones(oracion_correcta, oracion_player):
 
     for palabra in palabras_jugador:
         if palabra in palabras_correctas:
-            print(f"{GREEN} {palabra} {END}", end = "")
+            print(f"{GREEN}{palabra}{END}", end = " ")
         else:
             errores += 1
-            print(f"{RED} {palabra} {END}", end = "")
+            print(f"{RED}{palabra}{END}", end = " ")
 
     return errores
 
