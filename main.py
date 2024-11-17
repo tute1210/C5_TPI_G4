@@ -3,7 +3,7 @@ from juegos.JuegoAdivinaAnimal import iniciar_juego
 from juegos.ChOrD3 import juego_musica
 from juegos.tablas_de_multiplicar import LlamarJuegoMultiplicar
 from juegos.ultra_septimum import jugar
-from juegos.preguntas8_python import jugar_8preguntas
+from juegos.preguntas8_python import jugarpython8
 from juegos.Buscaminas import iniciar_Buscaminas
 menu = 0
 
@@ -36,7 +36,7 @@ while menu != 8:
     elif menu == 5:
         jugar()
     elif menu == 6:
-        jugar_8preguntas()
+        jugarpython8()
     elif menu == 7:
         iniciar_Buscaminas()
     elif menu == 8:
