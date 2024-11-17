@@ -3,7 +3,7 @@ def cazadores_de_gramatica():
 
     import random # Libreria "random" para poder obtener oraciones aleatorias de la lista "oraciones"
 
-    #Codigo ASCII de diferentes modos para decorar texto
+    #Codigo ANSI de diferentes modos para decorar texto
     BOLD = '\033[1m'       
     ITALIC = '\033[3m' 
     DARKCYAN = '\033[36m'    
@@ -39,13 +39,68 @@ def cazadores_de_gramatica():
     print(f"/////////                                                                                //")           
     print(f"///////////////////////////////////////////////////////////////////////////////////////////")
     print(f"///////////////////////////////////////////////////////////////////////////////////////////{END}")
-                                                                        
-                                                                     
-
+    print("\n","\n","\n","\n","\n","\n","\n","\n")   
 
     #Inicio de variables
     oraciones = []
-    puntuacion = 0
+    puntuacion = 0                                                                 
+                                                                     
+    indices_aleatorios = random.sample(range(len(oraciones)), 1)
+
+    j = 0    #Contador de oraciones
+    for i in indices_aleatorios:
+        print(f"{YELLOW}{BOLD}{j + 1} Oración a corregir:{END}", oraciones[i]["incorrecta"])
+        oracion_player = input(f"{YELLOW}{BOLD}Jugador: {END}")
+        errores = comparacion_oraciones(oracion_correcta=oraciones[i]["correcta"], oracion_player=oracion_player)
+        if errores == 0:
+            print("\n", "Felicitaciones! Oración perfecta. Obtuviste 100 puntos.")
+            puntuacion += 100
+        elif errores == 1:
+            print("\n", "Felicitaciones! Tuviste ", errores, ". Obtuviste 90 puntos.")
+            puntuacion += 90
+        elif errores == 2:
+            print("\n", "Felicitaciones! Tuviste ", errores,". Obtuviste 70 puntos.")
+            puntuacion += 70
+        elif errores == 3:
+            print("\n", "Felicitaciones! Tuviste ", errores, ". Obtuviste 50 puntos.")
+            puntuacion += 50
+        elif errores > 3:
+            print("\n", "Dejaste escapar la oración y sumas 0 puntos. Mejor suerte la proxima.")
+            puntuacion += 0
+
+        print("\n", "Ahora sumemos unos puntos extra!")
+
+        print("A continuación escriba los sustantivos de la oración:", "\n")
+        sustantivos_jugador = input(f"{BOLD}Jugador: {END}")
+        errores_sustantivos = comparacion_sustantivos(oraciones[i]["sustantivos"],sustantivos_jugador)
+        if errores_sustantivos == 0:
+            puntuacion += 30
+        print("Errores sustantivos: ",errores_sustantivos)
+
+        print("A continuación escriba los verbos de la oración:", "\n")
+        verbos_jugador = input(f"{BOLD}Jugador: {END}")
+        errores_verbos = comparacion_verbos(oraciones[i]["verbos"], verbos_jugador)
+        if errores_verbos == 0:
+            puntuacion += 30
+        print("Errores sustantivos: ",errores_verbos)
+
+        print("A continuación escriba los adjetivos de la oración:", "\n")
+        adjetivos_jugador = input(f"{BOLD}Jugador: {END}")
+        errores_adjetivos = comparacion_adjetivos(oraciones[i]["adjetivos"], adjetivos_jugador)
+        if errores_adjetivos == 0:
+            puntuacion += 30
+        print("Errores sustantivos: ",errores_adjetivos)
+        j += 1
+
+    print("La cazeria a terminado! Felicitaciones por haber llegado hasta el final!")
+    print("Tu puntaje final es: ", puntuacion)
+    
+
+    while True:
+        volver_menu = input("\nPresiona 'x' para volver al menú: ").lower()
+        if volver_menu == 'x':
+            print("Regresando al menú principal...")
+            break
 
     #Abrir archivo oraciones.txt y guardar contenido en lista
     def leer_archivo():
@@ -65,8 +120,6 @@ def cazadores_de_gramatica():
                 })
             archivo.close
 
-    leer_archivo()
-
     #Función que compara la oración correcta guardada en oraciones.txt con lo que ingresa el jugador
     def comparacion_oraciones(oracion_correcta, oracion_player):
         palabras_correctas = oracion_correcta.split()
@@ -80,9 +133,10 @@ def cazadores_de_gramatica():
 
         for palabra in palabras_jugador:
             if palabra in palabras_correctas:
-                aciertos += 1
+                print(f"{GREEN} {palabra} {END}", end = "")
             else:
                 errores += 1
+                print(f"{RED} {palabra} {END}", end = "")
 
         return errores
 
@@ -143,57 +197,3 @@ def cazadores_de_gramatica():
         # print("Aciertos: ", aciertos)
         # print("Errores: ", errores)s
         return errores
-
-    indices_aleatorios = random.sample(range(len(oraciones)), 1)
-
-    for i in indices_aleatorios:
-        print(f"{RED}{BOLD}Oración a corregir:{END}", oraciones[i]["incorrecta"])
-        oracion_player = input(f"{BOLD}Jugador: {END}")
-        errores = comparacion_oraciones(oracion_correcta=oraciones[i]["correcta"], oracion_player=oracion_player)
-        if errores == 0:
-            print("Felicitaciones! Oración perfecta. Obtuviste 100 puntos. Pasemos a la siguiente oraciones:")
-            puntuacion += 100
-        elif errores == 1:
-            print("Felicitaciones! Tuviste ", errores, ". Obtuviste 90 puntos. Pasemos a la siguiente oración:")
-            puntuacion += 90
-        elif errores == 2:
-            print("Felicitaciones! Tuviste ", errores,". Obtuviste 70 puntos. Pasemos a la siguiente oración:")
-            puntuacion += 70
-        elif errores == 3:
-            print("Felicitaciones! Tuviste ", errores, ". Obtuviste 50 puntos. Pasemos a la siguiente oración")
-            puntuacion += 50
-        else:
-            print("")
-
-        print("Ahora sumemos unos puntos extra!")
-
-        print("A continuación escriba los sustantivos de la oración:", "\n")
-        sustantivos_jugador = input(f"{BOLD}Jugador: {END}")
-        errores_sustantivos = comparacion_sustantivos(oraciones[i]["sustantivos"],sustantivos_jugador)
-        if errores_sustantivos == 0:
-            puntuacion += 30
-        print("Errores sustantivos: ",errores_sustantivos)
-
-        print("A continuación escriba los verbos de la oración:", "\n")
-        verbos_jugador = input(f"{BOLD}Jugador: {END}")
-        errores_verbos = comparacion_verbos(oraciones[i]["verbos"], verbos_jugador)
-        if errores_verbos == 0:
-            puntuacion += 30
-        print("Errores sustantivos: ",errores_verbos)
-
-        print("A continuación escriba los adjetivos de la oración:", "\n")
-        adjetivos_jugador = input(f"{BOLD}Jugador: {END}")
-        errores_adjetivos = comparacion_adjetivos(oraciones[i]["adjetivos"], adjetivos_jugador)
-        if errores_adjetivos == 0:
-            puntuacion += 30
-        print("Errores sustantivos: ",errores_adjetivos)
-
-    print("La cazeria a terminado! Felicitaciones por haber llegado hasta el final!")
-    print("Tu puntaje final es: ", puntuacion)
-    
-
-    while True:
-        volver_menu = input("\nPresiona 'x' para volver al menú: ").lower()
-        if volver_menu == 'x':
-            print("Regresando al menú principal...")
-            break
