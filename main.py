@@ -18,7 +18,7 @@ while menu != 3:
     print("        |3| →   Tablas de multiplicar     |")
     print("        |4| →            Ch0rD3           |")
     print("        |5| →        Ultra Septimum       |")
-    print("        |6| →            SALIR            |")
+    print("        |6| →            SALIR ad           |")
     print()
     menu = int(input("              Opcion a elegir →"))
     if menu == 1:
