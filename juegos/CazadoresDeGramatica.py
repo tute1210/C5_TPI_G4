@@ -2,6 +2,7 @@
 def cazadores_de_gramatica():
     from juegos.utilidades.funciones_CDG import leer_archivo
     from juegos.utilidades.funciones_CDG import comparacion_oraciones
+    from juegos.utilidades.inicio_CDG import incio_CDG
     import random # Libreria "random" para poder obtener oraciones aleatorias de la lista "oraciones"
 
     #Codigo ANSI de diferentes modos para decorar texto
@@ -16,52 +17,11 @@ def cazadores_de_gramatica():
 
     #Presentación del juego + instrucciones
 
-    print(f"{DARKCYAN}///////////////////////////////////////////////////////////////////////////////////////////")
-    print(f"///////////////////////////////////////////////////////////////////////////////////////////")
-    print(f"/////////        _____                             _                                     //")
-    print(f"/////////       / ____|                           | |                                    //")
-    print(f"/////////      | |        __ _   ____   __ _    __| |   ___    _ __    ___   ___         //")
-    print(f"/////////      | |       / _` | |_  /  / _` |  / _` |  / _ \  | '__|  / _ \ / __|        //")
-    print(f"/////////      | |____  | (_| |  / /  | (_| | | (_| | | (_) | | |    |  __/ \__ \        //")
-    print(f"/////////       \_____|  \__,_| /___|  \__,_|  \__,_|  \___/  |_|     \___| |___/        //")
-    print(f"/////////                                                                                //")                                                                   
-    print(f"/////////                                     _                                          //")
-    print(f"/////////                                    | |                                         //")
-    print(f"/////////                                  __| |   ___                                   //")
-    print(f"/////////                                 / _` |  / _ \                                  //")
-    print(f"/////////                                | (_| | |  __/                                  //")
-    print(f"/////////                                 \__,_|  \___|                                  //")                                                                                                                                       
-    print(f"/////////        _____                                      _     _                      //")
-    print(f"/////////       / ____|                                    | |   (_)                     //")
-    print(f"/////////      | |  __   _ __    __ _   _ __ ___     __ _  | |_   _    ___    __ _       //")
-    print(f"/////////      | | |_ | | '__|  / _` | | '_ ` _ \   / _` | | __| | |  / __|  / _` |      //")
-    print(f"/////////      | |__| | | |    | (_| | | | | | | | | (_| | | |_  | | | (__  | (_| |      //")
-    print(f"/////////       \_____| |_|     \__,_| |_| |_| |_|  \__,_|  \__| |_|  \___|  \__,_|      //")
-    print(f"/////////                                                                                //")           
-    print(f"///////////////////////////////////////////////////////////////////////////////////////////")
-    print(f"///////////////////////////////////////////////////////////////////////////////////////////{END}")
-    print("\n","\n","\n","\n","\n","\n","\n","\n")   
+    incio_CDG()  
 
     #Inicio de variables
     oraciones = []
-    puntuacion = 0                                                                 
-
-    #Abrir archivo oraciones.txt y guardar contenido en lista
-    # def leer_archivo():
-    #     with open("juegos/utilidades/oraciones.txt", "r", encoding="utf-8") as archivo:
-    #         for i in range(10):
-    #             oracion_incorrecta = archivo.readline()
-    #             oracion_correcta = archivo.readline()
-    #             sustantivos = archivo.readline()
-    #             verbos = archivo.readline()
-    #             adjetivos = archivo.readline()
-    #             oraciones.append({
-    #                 "incorrecta": oracion_incorrecta,
-    #                 "correcta": oracion_correcta,
-    #                 "sustantivos": sustantivos,
-    #                 "verbos": verbos,
-    #                 "adjetivos": adjetivos
-    #             })                                
+    puntuacion = 0                                                                                           
 
     leer_archivo(oraciones) 
                                   
