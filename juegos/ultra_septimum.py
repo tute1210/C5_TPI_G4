@@ -95,14 +95,14 @@ def jugar():
         Responde correctamente 2 o 3 preguntas de cada nivel para avanzar al siguiente. 
         Recuerda que solo tienes 3 vidas.
 
-PRIMER NIVEL: Verdadero o Falso - Ciencia
-SEGUNDO NIVEL: Verdadero o Falso - Deporte
-TERCER NIVEL: Verdadero o Falso - Famosos
-CUARTO NIVEL: Verdadero o Falso - Geografía
-QUINTO NIVEL: Verdadero o Falso - Idiomas
-SEXTO NIVEL: Verdadero o Falso - ¿Qué pasó primero? Historia
-SÉPTIMO NIVEL: Verdadero o Falso - Tecnología
-OCTAVO NIVEL: Definiciones de la categoría que elija entre Ciencia, Deporte, Música, Gastronomía, y Tecnología.
+    PRIMER NIVEL: Verdadero o Falso - Ciencia
+    SEGUNDO NIVEL: Verdadero o Falso - Deporte
+    TERCER NIVEL: Verdadero o Falso - Famosos
+    CUARTO NIVEL: Verdadero o Falso - Geografía
+    QUINTO NIVEL: Verdadero o Falso - Idiomas
+    SEXTO NIVEL: Verdadero o Falso - ¿Qué pasó primero? Historia
+    SÉPTIMO NIVEL: Verdadero o Falso - Tecnología
+    OCTAVO NIVEL: Definiciones de la categoría que elija entre Ciencia, Deporte, Música, Gastronomía, y Tecnología.
 
             
             """)
@@ -177,13 +177,13 @@ OCTAVO NIVEL: Definiciones de la categoría que elija entre Ciencia, Deporte, M�
 
     A continuación, deberás elegir una de las siguentes categorías ingresando su número correspondiente:
 
-1: Ciencia
-2: Deporte
-3: Música
-4: Gastronomía
-5: Tecnología
+    1: Ciencia
+    2: Deporte
+    3: Música
+    4: Gastronomía
+    5: Tecnología
 
-Elige sabiamente...¡Y que comience la última batalla!
+    Elige sabiamente...¡Y que comience la última batalla!
 
             """)
             
@@ -219,5 +219,3 @@ Elige sabiamente...¡Y que comience la última batalla!
             else:
                 print(game_over)
                 break
-
-jugar()
