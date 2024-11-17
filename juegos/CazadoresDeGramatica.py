@@ -1,6 +1,7 @@
 
 def cazadores_de_gramatica():
-
+    from juegos.utilidades.funciones_CDG import leer_archivo
+    from juegos.utilidades.funciones_CDG import comparacion_oraciones
     import random # Libreria "random" para poder obtener oraciones aleatorias de la lista "oraciones"
 
     #Codigo ANSI de diferentes modos para decorar texto
@@ -44,13 +45,43 @@ def cazadores_de_gramatica():
     #Inicio de variables
     oraciones = []
     puntuacion = 0                                                                 
-                                                                     
+
+    #Abrir archivo oraciones.txt y guardar contenido en lista
+    # def leer_archivo():
+    #     with open("juegos/utilidades/oraciones.txt", "r", encoding="utf-8") as archivo:
+    #         for i in range(10):
+    #             oracion_incorrecta = archivo.readline()
+    #             oracion_correcta = archivo.readline()
+    #             sustantivos = archivo.readline()
+    #             verbos = archivo.readline()
+    #             adjetivos = archivo.readline()
+    #             oraciones.append({
+    #                 "incorrecta": oracion_incorrecta,
+    #                 "correcta": oracion_correcta,
+    #                 "sustantivos": sustantivos,
+    #                 "verbos": verbos,
+    #                 "adjetivos": adjetivos
+    #             })                                
+
+    leer_archivo(oraciones) 
+                                  
     indices_aleatorios = random.sample(range(len(oraciones)), 1)
 
     j = 0    #Contador de oraciones
     for i in indices_aleatorios:
-        print(f"{YELLOW}{BOLD}{j + 1} Oración a corregir:{END}", oraciones[i]["incorrecta"])
-        oracion_player = input(f"{YELLOW}{BOLD}Jugador: {END}")
+
+        print(f"{YELLOW}{BOLD}{j + 1} Oración a corregir:{END}", oraciones[i]["incorrecta"]) # Imprimo en pantalla oración aleatoria a corregir
+
+        intentos = 2
+        while intentos > 0:
+            oracion_player = input(f"{YELLOW}{BOLD}Jugador: {END}")
+            
+            #Acá comparo el largo de la oración ingresada por el jugador por si se hace el vivo y quiere usar menos palabras de las que debe.
+            if len(oracion_player.split()) != len(oraciones[i]["correcta"].split()):
+                print(f"{RED}La cantidad de palabras no coincide. Inténtalo de nuevo.{END}")
+                intentos -= 1
+            break
+
         errores = comparacion_oraciones(oracion_correcta=oraciones[i]["correcta"], oracion_player=oracion_player)
         if errores == 0:
             print("\n", "Felicitaciones! Oración perfecta. Obtuviste 100 puntos.")
@@ -102,43 +133,25 @@ def cazadores_de_gramatica():
             print("Regresando al menú principal...")
             break
 
-    #Abrir archivo oraciones.txt y guardar contenido en lista
-    def leer_archivo():
-        with open("juegos/utilidades/oraciones.txt", "r", encoding="utf-8") as archivo:
-            for i in range(10):
-                oracion_incorrecta = archivo.readline()
-                oracion_correcta = archivo.readline()
-                sustantivos = archivo.readline()
-                verbos = archivo.readline()
-                adjetivos = archivo.readline()
-                oraciones.append({
-                    "incorrecta": oracion_incorrecta,
-                    "correcta": oracion_correcta,
-                    "sustantivos": sustantivos,
-                    "verbos": verbos,
-                    "adjetivos": adjetivos
-                })
-            archivo.close
-
     #Función que compara la oración correcta guardada en oraciones.txt con lo que ingresa el jugador
-    def comparacion_oraciones(oracion_correcta, oracion_player):
-        palabras_correctas = oracion_correcta.split()
-        palabras_jugador = oracion_player.split()
+    # def comparacion_oraciones(oracion_correcta, oracion_player):
+    #     palabras_correctas = oracion_correcta.split()
+    #     palabras_jugador = oracion_player.split()
 
-        aciertos = 0
-        errores = 0
+    #     aciertos = 0
+    #     errores = 0
 
-        long = len(palabras_correctas)
-        # Compara palabra por palabra
+    #     long = len(palabras_correctas)
+    #     # Compara palabra por palabra
 
-        for palabra in palabras_jugador:
-            if palabra in palabras_correctas:
-                print(f"{GREEN} {palabra} {END}", end = "")
-            else:
-                errores += 1
-                print(f"{RED} {palabra} {END}", end = "")
+    #     for palabra in palabras_jugador:
+    #         if palabra in palabras_correctas:
+    #             print(f"{GREEN} {palabra} {END}", end = "")
+    #         else:
+    #             errores += 1
+    #             print(f"{RED} {palabra} {END}", end = "")
 
-        return errores
+    #     return errores
 
     #Función que compara los sustantivos correctos guardados en oraciones.txt con lo que ingresa el jugador
     def comparacion_sustantivos(sustantivos, sustantivos_jugador):
@@ -195,5 +208,5 @@ def cazadores_de_gramatica():
                 errores += 1
         
         # print("Aciertos: ", aciertos)
-        # print("Errores: ", errores)s
+        # print("Errores: ", errores)
         return errores
