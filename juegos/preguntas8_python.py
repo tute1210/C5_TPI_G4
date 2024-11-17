@@ -118,7 +118,7 @@ with open("archivo.txt", "w") as f:
         print("Respuesta incorrecta. Intenta de nuevo.")
         return False
 
-def jugar():
+def jugarpython8():
     print("¡Bienvenido al juego de Python!")
     print("Reglas del juego:")
     print("1. El objetivo es completar los 8 niveles resolviendo preguntas de programación.")
@@ -139,5 +139,3 @@ def jugar():
     else:
         print("¡Felicidades! Has completado todos los niveles.")
         print("SOS UN CRACK EN PYTHON")
-
-jugar()
