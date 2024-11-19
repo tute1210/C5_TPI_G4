@@ -53,16 +53,16 @@ def cazadores_de_gramatica():
                 errores = comparacion_oraciones(oracion_correcta=oraciones[i]["correcta"], oracion_player=oracion_player)
                     
                 if errores == 0:
-                    print("\n","\n", f"Felicitaciones!{GREEN} Oración perfecta.{END} Obtuviste 100 puntos.")
+                    print("\n","\n", f"¡Felicitaciones!{GREEN} Oración perfecta.{END} Obtuviste 100 puntos.")
                     puntuacion += 100
                 elif errores == 1:
-                    print("\n", "\n", "Ups! Tuviste ", f"{RED}{errores}{END}", ". Obtuviste 90 puntos.")
+                    print("\n", "\n", "¡Ups! Tuviste ", f"{RED}{errores}{END}", ". Obtuviste 90 puntos.")
                     puntuacion += 90
                 elif errores == 2:
-                    print("\n", "\n", "Ups! Tuviste ",f"{RED}{errores}{END}",". Obtuviste 70 puntos.")
+                    print("\n", "\n", "¡Ups! Tuviste ",f"{RED}{errores}{END}",". Obtuviste 70 puntos.")
                     puntuacion += 70
                 elif errores == 3:
-                    print("\n", "\n", "Ups! Tuviste ", f"{RED}{errores}{END}", ". Obtuviste 50 puntos.")
+                    print("\n", "\n", "¡Ups! Tuviste ", f"{RED}{errores}{END}", ". Obtuviste 50 puntos.")
                     puntuacion += 50
                 elif errores > 3:
                     print("\n", "\n", "Dejaste escapar la oración y sumas 0 puntos. Mejor suerte la proxima.")
@@ -101,7 +101,7 @@ def cazadores_de_gramatica():
         j += 1
                     
     
-    print("La cazeria a terminado! Felicitaciones por haber llegado hasta el final!")
+    print("¡La cazeria a terminado! ¡Felicitaciones por haber llegado hasta el final!")
     print("Tu puntaje final es: ", puntuacion)
     
 
